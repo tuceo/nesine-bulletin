@@ -17,7 +17,7 @@ const Event = ({eventData}) => {
 					const odd = eventData?.OCG?.[market.ID]?.OC?.[odds.ID]?.O;
 					const isActive = selectedEvent && selectedEvent?.marketId === market.ID && selectedEvent?.odd === odd;
 					return <td key={odds.ID}
-						onClick={() => handleAddItemToSlip(eventData.OCG[1].MBS, eventData.N, eventData.C, market.ID, odd)}
+						onClick={() => odd && handleAddItemToSlip(eventData.OCG[1].MBS, eventData.N, eventData.C, market.ID, odd)}
 						className={`bulletin-event-odd ${isActive && "active-odd"}`}>{odd}</td>
 				})))}
 		</tr>
