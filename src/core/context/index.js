@@ -17,7 +17,7 @@ const ContextProvider = (props) => {
 			} else { // different odd selected
 				setSlipItems([
 					...slipItems.filter(slipItem => slipItem.code !== eventCode),
-					{name: eventName, code: eventCode, marketId, odd}
+					{mbs, name: eventName, code: eventCode, marketId, odd}
 				])
 			}
 		} else {

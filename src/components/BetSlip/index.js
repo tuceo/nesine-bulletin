@@ -4,6 +4,7 @@ import {useContext} from "react";
 const BetSlip = () => {
 	const {slipItems, totalOdds} = {...useContext(Context)};
 
+	console.log("slipItems",slipItems)
 	return (
 		<div className={"bet-slip"}>
 			{slipItems.map((item) =>
