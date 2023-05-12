@@ -1,15 +1,15 @@
-import {useContext} from "react";
-import {Context} from "../../core/context";
-import {marketList} from "../../core/constants";
+import { useContext } from "react";
+import { Context } from "../../core/context";
+import { marketList } from "../../core/constants";
 
-const Event = ({eventData}) => {
-	const {slipItems, handleAddItemToSlip} = {...useContext(Context)};
+const Event = ({ eventData }) => {
+	const { slipItems, handleAddItemToSlip } = { ...useContext(Context) };
 	const selectedEvent = slipItems.find(slipItem => slipItem.code === eventData.C)
 
 	return (
 		<tr>
 			<td className={"bulletin-event-name"}>
-				<span className={"bold"}>{eventData.C}</span> {eventData.T} {eventData.N}
+				<div><span className={"bold"}>{eventData.C}</span> {eventData.T} {eventData.N}</div>
 				<div className={"bulletin-event-mbs"}>{eventData.OCG[1].MBS}</div>
 			</td>
 			{marketList.map((market) => (

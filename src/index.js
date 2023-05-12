@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import Bulletin from "./components/Bulletin";
+import Bulletin from "./screens/Bulletin";
 import "./style.scss"
 
 const container = document.getElementById("root");

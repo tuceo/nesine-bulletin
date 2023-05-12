@@ -29,6 +29,8 @@ th, td {
     text-align: left;
     position: relative;
     min-width: 250px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &-event-odd {
@@ -44,11 +46,6 @@ th, td {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 15px;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
   }
 }
 
@@ -66,13 +63,18 @@ th, td {
   right: 0;
   background: $white;
   border: 1px solid $grey;
-  width: 400px;
+  width: 450px;
   padding: 10px;
 
   &-item {
     border-bottom: 1px solid $grey;
-    margin-bottom: 5px;
     padding: 10px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-total {
+    font-weight: 600;
+    padding: 10px;
   }
 }
